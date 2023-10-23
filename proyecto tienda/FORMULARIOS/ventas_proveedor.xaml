@@ -1,0 +1,41 @@
+﻿<Window x:Class="proyecto_tienda.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda"
+        mc:Ignorable="d"
+        Title="Window3" Height="450" Width="800">
+    <Grid>
+        <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Center" Width="768" Background="#FFB6E5DB"/>
+
+        <Label Content="ID del proveedor:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFB6E5DB" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" Foreground="#FFB6E5DB" BorderBrush="{x:Null}"/>
+        <Button Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF4B9E86" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF3E8A74" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Height="31" Margin="282,32,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="160,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF53B599" HorizontalContentAlignment="Center" Click="Button_Click" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
+        <DatePicker HorizontalAlignment="Left" Height="32" Margin="625,33,0,0" VerticalAlignment="Top" Width="150" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <Label Content="ID" HorizontalAlignment="Left" Height="31" Margin="47,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="47,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <Label Content="Producto" HorizontalAlignment="Left" Height="31" Margin="184,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="184,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Height="31" Margin="321,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="321,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="460,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <Label Content="Costo" HorizontalAlignment="Left" Height="31" Margin="460,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
+        <Image HorizontalAlignment="Left" Height="31" Margin="690,139,0,0" VerticalAlignment="Top" Width="32"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="30" Margin="625,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" RenderTransformOrigin="1.51,0.221" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="30" Margin="663,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
+        <DataGrid HorizontalAlignment="Left" Height="189" Margin="248,178,0,0" VerticalAlignment="Top" Width="359" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" Foreground="Black" FontFamily="Yu Gothic UI Semibold" FontSize="15">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Código" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
+                <DataGridTextColumn Header="Descripción" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
+                <DataGridTextColumn Header="Cantidad" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
+                <DataGridTextColumn Header="Costo" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
+                <DataGridTextColumn Header="Importe" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

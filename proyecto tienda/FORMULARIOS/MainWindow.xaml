@@ -1,0 +1,26 @@
+﻿<Window x:Class="proyecto_tienda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="White">
+        <Image HorizontalAlignment="Left" Height="102" Margin="607,316,0,0" VerticalAlignment="Top" Width="202" Opacity="0.935" Source="/WhatsApp Image 2023-04-24 at 8.51.18 AM.png"/>
+        <Label Content="" HorizontalAlignment="Center" Height="254" Margin="0,64,0,0" VerticalAlignment="Top" Width="458">
+            <Label.Background>
+                <SolidColorBrush Color="#FFF0609C" Opacity="0.9"/>
+            </Label.Background>
+        </Label>
+
+        <Label Content="USUARIO:" HorizontalAlignment="Left" Height="36" Margin="183,105,0,0" VerticalAlignment="Top" Width="194" Cursor="" Focusable="False" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="White"/>
+        <Label Content="CONTRASEÑA:" HorizontalAlignment="Left" Height="36" Margin="183,164,0,0" VerticalAlignment="Top" Width="194" Cursor="" Focusable="False" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFFFEFE"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="400,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Cursor="" Focusable="False" Background="#FFF5BADF"/>
+        <Button x:Name="btnCrearCuenta" Content="Crear cuenta" HorizontalAlignment="Left" Height="44" Margin="279,253,0,0" VerticalAlignment="Top" Width="98" Background="#FFF14598" Foreground="White" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}"/>
+        <Label Content="" HorizontalAlignment="Center" Height="33" Margin="0,401,0,0" VerticalAlignment="Top" Width="800" Background="#FFF0609C"/>
+        <Button x:Name="btnInicioSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Height="44" Margin="419,253,0,0" VerticalAlignment="Top" Width="98" Background="#FFF14598" Foreground="White"  FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Click="btnInicioSesion_Click"/>
+        <PasswordBox HorizontalAlignment="Left" Height="36" Margin="400,164,0,0" VerticalAlignment="Top" Width="158" Background="#FFF5BADF"/>
+
+    </Grid>
+</Window>

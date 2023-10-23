@@ -1,0 +1,29 @@
+﻿<Window x:Class="proyecto_tienda.Window5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda"
+        mc:Ignorable="d"
+        Title="Window5" Height="450" Width="800">
+    <Grid Background="#FFF9EEF8">
+        <Label Content="" HorizontalAlignment="Center" Height="385" Margin="0,26,0,0" VerticalAlignment="Top" Width="682" Background="#FFFFC8DF"/>
+
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="260,95,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
+        <Label Content="Apellido paterno:" HorizontalAlignment="Left" Margin="260,139,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
+        <Label Content="Apellido materno:" HorizontalAlignment="Left" Margin="260,185,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
+        <Label Content="Número telefónico:" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Height="28" Margin="426,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFFF9BC4" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Height="28" Margin="286,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFE07DA6" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White"/>
+        <Label Content="ID automático:" HorizontalAlignment="Left" Margin="260,276,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Button Content="Generar" HorizontalAlignment="Left" Height="22" Margin="592,284,0,0" VerticalAlignment="Top" Width="86" Background="#FFE877A5" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White" BorderBrush="{x:Null}"/>
+        <Label Content="REGISTRAR CLIENTE" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FFA9357C" Height="62" Width="318" Background="{x:Null}" HorizontalContentAlignment="Center"/>
+        <Label Content="REGISTRAR CLIENTE" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FFDF6CB2" Height="62" Width="318" Background="{x:Null}" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

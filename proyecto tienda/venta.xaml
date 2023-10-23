@@ -1,0 +1,20 @@
+﻿<Window x:Class="proyecto_tienda.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda"
+        mc:Ignorable="d"
+        Title="Window3" Height="450" Width="800">
+    <Grid Background="#FFDD94B2">
+        <Label Content="Proveedor:" HorizontalAlignment="Left" Height="31" Margin="239,77,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Right" Background="#FFD284A5"/>
+        <Label Content="Producto:" HorizontalAlignment="Left" Height="31" Margin="239,145,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Right" Background="#FFD284A5"/>
+        <Label Content="Costo:" HorizontalAlignment="Left" Height="31" Margin="239,218,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Right" Background="#FFD284A5"/>
+        <Label Content="Cantidad:" HorizontalAlignment="Left" Height="31" Margin="239,289,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Right" Background="#FFD284A5"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="400,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="400,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="250,360,0,0" VerticalAlignment="Top" Width="122" Background="#FF925970"/>
+        <Button Content="Aceptar" HorizontalAlignment="Left" Height="31" Margin="410,360,0,0" VerticalAlignment="Top" Width="122" Background="#FF925970"/>
+
+    </Grid>
+</Window>
