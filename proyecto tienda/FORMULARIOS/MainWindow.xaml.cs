@@ -25,11 +25,6 @@ namespace proyecto_tienda
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnInicioSesion_Click(object sender, RoutedEventArgs e)
         {
             FORMULARIOS.inicio x = new FORMULARIOS.inicio();
