@@ -9,16 +9,16 @@
     <Grid Background="#FFE8EBE8">
         <Label Content="" HorizontalAlignment="Center" Height="385" Margin="0,26,0,0" VerticalAlignment="Top" Width="682" Background="#FFBDDCC0"/>
 
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="292,366,0,0" VerticalAlignment="Top" Width="122" Background="#FF526F55" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="436,366,0,0" VerticalAlignment="Top" Width="122" Background="#FF83B289" HorizontalContentAlignment="Center" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White"/>
+        <Button x:Name="btnguardarp" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="292,366,0,0" VerticalAlignment="Top" Width="122" Background="#FF526F55" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White" Click="btnguardarp_Click"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="436,366,0,0" VerticalAlignment="Top" Width="122" Background="#FF83B289" HorizontalContentAlignment="Center" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White"/>
         <Label Content="ID:" HorizontalAlignment="Left" Margin="247,88,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDDCC0" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF24542A"/>
         <Label Content="Precio:" HorizontalAlignment="Left" Margin="247,127,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDDCC0" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF24542A"/>
         <Label Content="Unidad:" HorizontalAlignment="Left" Margin="247,165,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDDCC0" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF24542A"/>
         <Label Content="Descripción:" HorizontalAlignment="Left" Margin="247,244,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDDCC0" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF24542A"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="400,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="400,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="400,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
-        <TextBox HorizontalAlignment="Left" Height="82" Margin="400,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
+        <TextBox x:Name="txtidp" HorizontalAlignment="Left" Height="26" Margin="400,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtpreciop" HorizontalAlignment="Left" Height="26" Margin="400,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtunidadp" HorizontalAlignment="Left" Height="26" Margin="400,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtdescp" HorizontalAlignment="Left" Height="82" Margin="400,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
         <Label Content="Grupo:" HorizontalAlignment="Left" Margin="247,200,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDDCC0" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF24542A"/>
         <Button Content="Crear grupo" HorizontalAlignment="Left" Height="26" Margin="548,208,0,0" VerticalAlignment="Top" Width="92" Background="#FF458C4D" HorizontalContentAlignment="Center" Click="Button_Click" Foreground="White" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}"/>
         <Label Content="INGRESAR PRODUCTO" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF6D8772" Height="62" Width="350" Background="{x:Null}" HorizontalContentAlignment="Center"/>
