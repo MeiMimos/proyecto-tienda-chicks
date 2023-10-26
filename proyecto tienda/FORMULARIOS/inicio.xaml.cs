@@ -32,5 +32,11 @@ namespace proyecto_tienda
         {
        
         }
+
+        private void btnRegCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Window5 x= new Window5();
+            x.Show();
+        }
     }
 }

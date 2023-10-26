@@ -12,14 +12,14 @@
         <Label Content="ID:" HorizontalAlignment="Left" Margin="252,111,0,0" VerticalAlignment="Top" Width="128" Background="#FFD278B3" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF5F0851"/>
         <Label Content="Estante:" HorizontalAlignment="Left" Margin="252,155,0,0" VerticalAlignment="Top" Width="128" Background="#FFD278B3" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF5F0851"/>
         <Label Content="Tipo de producto:" HorizontalAlignment="Left" Margin="252,201,0,0" VerticalAlignment="Top" Width="128" Background="#FFD278B3" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF5F0851"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="417,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtIdGrupo" HorizontalAlignment="Left" Height="26" Margin="417,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" KeyDown="txtIdGrupo_KeyDown"/>
         <Label Content="Color:" HorizontalAlignment="Left" Margin="252,247,0,0" VerticalAlignment="Top" Width="128" Background="#FFD278B3" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF5F0851"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="417,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="273,327,0,0" VerticalAlignment="Top" Width="122" Background="#FFBA378D" BorderBrush="{x:Null}"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="417,327,0,0" VerticalAlignment="Top" Width="122" Background="#FFCE4EA1" HorizontalContentAlignment="Center"  BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtColorGrupo" HorizontalAlignment="Left" Height="26" Margin="417,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="btnGuardarGrupo" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="273,327,0,0" VerticalAlignment="Top" Width="122" Background="#FFBA378D" BorderBrush="{x:Null}" Click="btnGuardarGrupo_Click"/>
+        <Button x:Name="btnRegresarGrupo" Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="417,327,0,0" VerticalAlignment="Top" Width="122" Background="#FFCE4EA1" HorizontalContentAlignment="Center"  BorderBrush="{x:Null}" Click="btnRegresarGrupo_Click"/>
         <Label Content="GENERAR GRUPO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF840E70" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="GENERAR GRUPO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FFB41298" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="417,0,0,0" VerticalAlignment="Center" Width="138" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cboxTipoProducto" HorizontalAlignment="Left" Height="26" Margin="417,0,0,0" VerticalAlignment="Center" Width="138" BorderBrush="{x:Null}">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -27,7 +27,7 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="417,157,0,0" VerticalAlignment="Top" Width="138" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cboxEstantes" HorizontalAlignment="Left" Height="26" Margin="417,157,0,0" VerticalAlignment="Top" Width="138" BorderBrush="{x:Null}">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>

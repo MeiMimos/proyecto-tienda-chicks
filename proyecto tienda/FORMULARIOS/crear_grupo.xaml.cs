@@ -23,5 +23,35 @@ namespace proyecto_tienda
         {
             InitializeComponent();
         }
+
+        private void btnRegresarGrupo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnGuardarGrupo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtIdGrupo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key >= Key.D0 && e.Key <= Key.D9 || e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9 || e.Key == Key.OemPeriod)
+            {
+                if (e.Key == Key.OemPeriod && txtIdGrupo.Text.IndexOf('.') != -1)
+                {
+                    e.Handled = true;
+                    return;
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sólo admite números.");
+            }
+        }
     }
 }

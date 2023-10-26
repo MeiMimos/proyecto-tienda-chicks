@@ -27,7 +27,13 @@ namespace proyecto_tienda
 
         private void btnInicioSesion_Click(object sender, RoutedEventArgs e)
         {
-            FORMULARIOS.inicio x = new FORMULARIOS.inicio();
+            Window1 x = new Window1();
+            x.Show();
+        }
+
+        private void btnCrearCuenta_Click(object sender, RoutedEventArgs e)
+        {
+            usuario_detalle x = new usuario_detalle();  
             x.Show();
         }
     }
