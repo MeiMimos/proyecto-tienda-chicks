@@ -13,15 +13,14 @@
         <Label Content="Apellido paterno:" HorizontalAlignment="Left" Margin="260,139,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
         <Label Content="Apellido materno:" HorizontalAlignment="Left" Margin="260,185,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
         <Label Content="Número telefónico:" HorizontalAlignment="Left" Margin="260,232,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="28" Margin="426,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFFF9BC4" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White"/>
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="28" Margin="286,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFE07DA6" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White"/>
+        <TextBox x:Name="txtnombrec" HorizontalAlignment="Left" Height="26" Margin="441,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtappc" HorizontalAlignment="Left" Height="26" Margin="441,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtapmc" HorizontalAlignment="Left" Height="26" Margin="441,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txttelefonoc" HorizontalAlignment="Left" Height="26" Margin="441,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/><Button Content="Regresar" HorizontalAlignment="Left" Height="28" Margin="426,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFFF9BC4" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button x:Name="btnguardarc" Content="Guardar" HorizontalAlignment="Left" Height="28" Margin="286,353,0,0" VerticalAlignment="Top" Width="114" Background="#FFE07DA6" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White" Click="btnguardarc_Click"/>
         <Label Content="ID automático:" HorizontalAlignment="Left" Margin="260,276,0,0" VerticalAlignment="Top" Width="128" Background="#FFFFC8DF" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FF900464"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="441,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Generar" HorizontalAlignment="Left" Height="22" Margin="592,284,0,0" VerticalAlignment="Top" Width="86" Background="#FFE877A5" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtidc" HorizontalAlignment="Left" Height="26" Margin="441,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="btngenerar" Content="Generar" HorizontalAlignment="Left" Height="22" Margin="592,284,0,0" VerticalAlignment="Top" Width="86" Background="#FFE877A5" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White" BorderBrush="{x:Null}"/>
         <Label Content="REGISTRAR CLIENTE" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FFA9357C" Height="62" Width="318" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="REGISTRAR CLIENTE" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FFDF6CB2" Height="62" Width="318" Background="{x:Null}" HorizontalContentAlignment="Center"/>
 

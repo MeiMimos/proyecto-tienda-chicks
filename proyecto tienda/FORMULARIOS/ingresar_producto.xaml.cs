@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using proyecto_tienda.CLASES;
 
 namespace proyecto_tienda
 {
@@ -22,11 +24,45 @@ namespace proyecto_tienda
         public Window2()
         {
             InitializeComponent();
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnCrearGrupo_Click(object sender, RoutedEventArgs e)
         {
+            Window6 x = new Window6();
+            x.Show();
+            this.Close();
 
+        }
+
+        private void Guardar()
+        {
+            SqlConnection con = new SqlConnection(clconexion.Conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+            bool todobien = false;
+            try
+            {
+                con.Open();
+                cmd.CommandText = "INSERT INTO PRODUCTO(PRO_ID, PRO_PRECIO, PRO_UNIDAD, PRO_DESCRIPCION)VALUES(" + Convert.ToInt32(txtidp.Text) + ",'" + txtpreciop.Text + ",'" + txtunidadp + ",'" + txtdescp + "')";
+                cmd.ExecuteNonQuery();
+                todobien = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudieron guardar los datos. " + e);
+            }
+            finally
+            {
+                if (todobien == true)
+                {
+                    MessageBox.Show("Sus datos se guardaron correctamente.");
+                }
+            }
+            con.Close();
+        }
+        private void btnguardarp_Click(object sender, RoutedEventArgs e)
+        {
+            Guardar();
         }
     }
 }

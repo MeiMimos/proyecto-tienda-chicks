@@ -1,5 +1,7 @@
-﻿using System;
+﻿using proyecto_tienda.CLASES;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +26,35 @@ namespace proyecto_tienda
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Guardar()
         {
+            SqlConnection con = new SqlConnection(clconexion.Conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+            bool todobien = false;
+            try
+            {
+                con.Open();
+                cmd.CommandText = "INSERT INTO PROVEEDOR(PRV_ID, PRV_NOMBRE, PRV_TELEFONO)VALUES(" + Convert.ToInt32(txtidp.Text) + ",'" + txtnombrep.Text + ",'" + txtcontactop.Text + "')";
+                cmd.ExecuteNonQuery();
+                todobien = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudieron guardar los datos. " + e);
+            }
+            finally
+            {
+                if (todobien == true)
+                {
+                    MessageBox.Show("Sus datos se guardaron correctamente.");
+                }
+            }
+            con.Close();
+        }
+
+        private void btnguardarp_Click(object sender, RoutedEventArgs e)
+        {
+            Guardar();
         }
     }
 }

@@ -28,10 +28,5 @@ namespace proyecto_tienda
         {
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

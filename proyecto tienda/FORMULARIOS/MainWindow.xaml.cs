@@ -29,12 +29,15 @@ namespace proyecto_tienda
         {
             Window1 x = new Window1();
             x.Show();
+            this.Close();
         }
 
         private void btnCrearCuenta_Click(object sender, RoutedEventArgs e)
         {
             usuario_detalle x = new usuario_detalle();  
             x.Show();
+            this.Close();
         }
+
     }
 }
