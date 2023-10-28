@@ -30,7 +30,28 @@ namespace proyecto_tienda
 
         private void BtnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-       
+            MainWindow x = new MainWindow();
+            x.Show();
+            this.Close();
+        }
+
+        private void btnRegCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Window5 x= new Window5();
+            x.Show();
+            this.Close();
+        }
+
+        private void btnRegProducto_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 x= new Window2();
+            x.Show();
+            this.Close();
+        }
+
+        private void btnCrearUsuario_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

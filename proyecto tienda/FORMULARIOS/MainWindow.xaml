@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyecto_tienda"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FORMULARIOS/MainWindow" Height="450" Width="800">
     <Grid Background="White">
         <Image HorizontalAlignment="Left" Height="102" Margin="607,316,0,0" VerticalAlignment="Top" Width="202" Opacity="0.935" Source="/WhatsApp Image 2023-04-24 at 8.51.18 AM.png"/>
         <Label Content="" HorizontalAlignment="Center" Height="254" Margin="0,64,0,0" VerticalAlignment="Top" Width="458">
@@ -16,11 +16,10 @@
 
         <Label Content="USUARIO:" HorizontalAlignment="Left" Height="36" Margin="183,105,0,0" VerticalAlignment="Top" Width="194" Cursor="" Focusable="False" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="White"/>
         <Label Content="CONTRASEÑA:" HorizontalAlignment="Left" Height="36" Margin="183,164,0,0" VerticalAlignment="Top" Width="194" Cursor="" Focusable="False" HorizontalContentAlignment="Right" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFFFEFE"/>
-        <TextBox HorizontalAlignment="Left" Height="36" Margin="400,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Cursor="" Focusable="False" Background="#FFF5BADF"/>
-        <Button x:Name="btnCrearCuenta" Content="Crear cuenta" HorizontalAlignment="Left" Height="44" Margin="279,253,0,0" VerticalAlignment="Top" Width="98" Background="#FFF14598" Foreground="White" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtUsuarioInicio" HorizontalAlignment="Left" Height="36" Margin="400,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" Cursor="" Focusable="False" Background="#FFF5BADF" Foreground="White"/>
         <Label Content="" HorizontalAlignment="Center" Height="33" Margin="0,401,0,0" VerticalAlignment="Top" Width="800" Background="#FFF0609C"/>
-        <Button x:Name="btnInicioSesion" Content="Iniciar sesión" HorizontalAlignment="Left" Height="44" Margin="419,253,0,0" VerticalAlignment="Top" Width="98" Background="#FFF14598" Foreground="White"  FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Click="btnInicioSesion_Click"/>
-        <PasswordBox HorizontalAlignment="Left" Height="36" Margin="400,164,0,0" VerticalAlignment="Top" Width="158" Background="#FFF5BADF"/>
+        <Button x:Name="btnInicioSesion" Content="Iniciar sesión" HorizontalAlignment="Center" Height="44" Margin="0,248,0,0" VerticalAlignment="Top" Width="98" Background="#FFF14598" Foreground="White"  FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Click="btnInicioSesion_Click"/>
+        <PasswordBox x:Name="txtContraseñaInicio" HorizontalAlignment="Left" Height="36" Margin="400,164,0,0" VerticalAlignment="Top" Width="158" Background="#FFF5BADF" Foreground="White"/>
 
     </Grid>
 </Window>
