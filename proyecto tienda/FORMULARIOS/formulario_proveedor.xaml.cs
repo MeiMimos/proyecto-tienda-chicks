@@ -45,7 +45,7 @@ namespace proyecto_tienda
             {
                 if (todobien == true)
                 {
-                    MessageBox.Show("Sus datos se guardaron correctamente.");
+                    MessageBox.Show("Sus datos fueron guardados correctamente.");
                 }
             }
             con.Close();

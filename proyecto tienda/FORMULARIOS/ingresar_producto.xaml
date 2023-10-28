@@ -23,7 +23,7 @@
         <Button Content="Crear grupo" HorizontalAlignment="Left" Height="26" Margin="548,208,0,0" VerticalAlignment="Top" Width="92" Background="#FF458C4D" HorizontalContentAlignment="Center" Click="Button_Click" Foreground="White" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}"/>
         <Label Content="INGRESAR PRODUCTO" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF6D8772" Height="62" Width="350" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="INGRESAR PRODUCTO" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FF9DB4A1" Height="62" Width="350" Background="{x:Null}" HorizontalContentAlignment="Center"/>
-        <ComboBox HorizontalAlignment="Left" Height="26" Margin="400,0,0,0" VerticalAlignment="Center" Width="135" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cbgrupo" HorizontalAlignment="Left" Height="26" Margin="400,0,0,0" VerticalAlignment="Center" Width="135" BorderBrush="{x:Null}">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>

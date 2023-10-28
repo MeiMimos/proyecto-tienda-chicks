@@ -27,7 +27,7 @@ namespace proyecto_tienda
 
         private void btnInicioSesion_Click(object sender, RoutedEventArgs e)
         {
-            FORMULARIOS.inicio x = new FORMULARIOS.inicio();
+            proyecto_tienda.Window1 x = new proyecto_tienda.Window1();
             x.Show();
         }
     }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using proyecto_tienda.CLASES;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,8 @@ namespace proyecto_tienda
         public Window2()
         {
             InitializeComponent();
+            ObservableCollection<clgrupo> lista = new ObservableCollection<clgrupo>(GetDataBase.ObtenerGrupo(clsconexion.Conectar()));
+            cbgrupo.ItemsSource = lista;
         }
         private void Guardar()
         {
@@ -32,7 +36,7 @@ namespace proyecto_tienda
             try
             {
                 con.Open();
-                cmd.CommandText = "INSERT INTO PRODUCTO(PRO_ID, PRO_PRECIO, PRO_UNIDAD, PRO_DESCRIPCION)VALUES(" + Convert.ToInt32(txtidp.Text) + ",'" + txtpreciop.Text + ",'" + txtunidadp + ",'" + txtdescp + "')";
+                cmd.CommandText = "INSERT INTO PRODUCTO(PRO_ID, PRO_PRECIO, PRO_UNIDAD, PRO_GRU_ID, PRO_DESCRIPCION)VALUES(" + Convert.ToInt32(txtidp.Text) + ",'" + txtpreciop.Text + ",'" + txtunidadp.Text + ",'" + cbgrupo.SelectedValue + ",'" + txtdescp.Text + "')";
                 cmd.ExecuteNonQuery();
                 todobien = true;
             }
@@ -44,7 +48,7 @@ namespace proyecto_tienda
             {
                 if (todobien == true)
                 {
-                    MessageBox.Show("Sus datos se guardaron correctamente.");
+                    MessageBox.Show("Sus datos fueron guardados correctamente.");
                 }
             }
             con.Close();
