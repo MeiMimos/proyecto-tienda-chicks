@@ -37,12 +37,14 @@ namespace proyecto_tienda
         private void Guardar()
         {
             SqlConnection con = new SqlConnection(clconexion.Conectar());
-            SqlCommand cmd = new SqlCommand("", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO GRUPO(GRU_ID, GRU_EST_ID, GRU_COLORES) VALUES (@GRU_ID, @GRU_EST_ID, @GRU_COLORES)", con);
             bool todobien = false;
             try
             {
                 con.Open();
-                cmd.CommandText = "INSERT INTO GRUPO(GRU_ID, GRU_EST_ID, GRU_COLORES)VALUES(" + Convert.ToInt32(txtIdGrupo.Text) + ",'" + txtIdGrupo.Text + ",'" + cboxEstantes.Text + ",'" + cboxTipoProducto.Text + ",'" + txtColorGrupo.Text + "')";
+                cmd.Parameters.AddWithValue("@GRU_ID", Convert.ToInt32(txtIdGrupo.Text));
+                cmd.Parameters.AddWithValue("@GRU_EST_ID", cboxEstantes.Text);
+                cmd.Parameters.AddWithValue("@GRU_COLORES", txtColorGrupo.Text);
                 cmd.ExecuteNonQuery();
                 todobien = true;
             }

@@ -34,9 +34,17 @@ namespace proyecto_tienda
             try
             {
                 con.Open();
-               // cmd.CommandText = "INSERT INTO CLIENTE(CLI_NOM, CLI_APP, CLI_APM, CLI_APM, CLI_TELEFONO)VALUES(" + Convert.ToInt32(txtidc.Text) + ",'" + txtnombrec.Text + ",'" + txtappc.Text + ",'" + txtapmc.Text + ",'" + txttelefonoc.Text + "')";
+                cmd.CommandText = "INSERT INTO USUARIO(USU_ID, USU_NOMBRE, USU_CONTRASENA) VALUES(@USU_ID, @USU_NOMBRE, @USU_CONTRASENA)";
+                cmd.Parameters.AddWithValue("@USU_ID", Convert.ToInt32(txtIdUsuario.Text));
+                cmd.Parameters.AddWithValue("@USU_NOMBRE", txtNomUsuario.Text);
+                cmd.Parameters.AddWithValue("@USU_CONTRASENA", txtContraUsuarioUnico.Text);
                 cmd.ExecuteNonQuery();
                 todobien = true;
+
+                /*con.Open();
+                cmd.CommandText = "INSERT INTO USUARIO(USU_ID, USU_NOMBRE, USU_CONTRASENA)VALUES(" + Convert.ToInt32(txtIdUsuario.Text) + ",'" + txtNomUsuario.Text + ",'" + txtContraUsuarioUnico.Text +"')";
+                cmd.ExecuteNonQuery();
+                todobien = true;*/
             }
             catch (Exception e)
             {
@@ -55,14 +63,14 @@ namespace proyecto_tienda
 
         private void btnRegresarUsuario_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow x = new MainWindow();
+            Window1 x = new Window1(); 
             x.Show();
             this.Close();
         }
 
         private void btnCrearUsuario_Click(object sender, RoutedEventArgs e)
         {
-
+            Guardar();
         }
     }
 }
