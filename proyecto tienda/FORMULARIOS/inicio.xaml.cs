@@ -51,7 +51,30 @@ namespace proyecto_tienda
 
         private void btnCrearUsuario_Click(object sender, RoutedEventArgs e)
         {
+            usuario_detalle x = new usuario_detalle();
+            x.Show();
+            this.Close();
+        }
 
+        private void btnRegProveedor_Click(object sender, RoutedEventArgs e)
+        {
+            Window4 x = new Window4();
+            x.Show();
+            this.Close();
+        }
+
+        private void btnRegCompra_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 x = new Window3();
+            x.Show();
+            this.Close();
+        }
+
+        private void btnAtenCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Window7 x = new Window7();
+            x.Show();
+            this.Close();
         }
     }
 }

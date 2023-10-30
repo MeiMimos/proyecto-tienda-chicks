@@ -8,14 +8,16 @@
         Title="usuario_detalle" Height="450" Width="800">
     <Grid Background="#FFFDF8FF">
         <Label Content="" HorizontalAlignment="Center" Height="385" Margin="0,26,0,0" VerticalAlignment="Top" Width="682" Background="#FFBDD6DC"/>
-        <Label Content="Usuario:" HorizontalAlignment="Left" Margin="245,168,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDD6DC" HorizontalContentAlignment="Right" Foreground="#FF384C78" FontFamily="Yu Gothic UI Semibold"/>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="245,168,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDD6DC" HorizontalContentAlignment="Right" Foreground="#FF384C78" FontFamily="Yu Gothic UI Semibold"/>
         <Label Content="Contraseña:" HorizontalAlignment="Left" Margin="245,217,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDD6DC" HorizontalContentAlignment="Right" Foreground="#FF384C78" FontFamily="Yu Gothic UI Semibold"/>
         <Button x:Name="btnCrearUsuario" Content="Crear" HorizontalAlignment="Left" Height="28" Margin="276,343,0,0" VerticalAlignment="Top" Width="114" Background="#FF446E85" Foreground="White" BorderBrush="{x:Null}" FontFamily="Yu Gothic UI Semibold" FontSize="15" Click="btnCrearUsuario_Click"/>
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="26" Margin="426,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtNomUsuario" HorizontalAlignment="Left" Height="26" Margin="426,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
         <TextBox x:Name="txtContraUsuarioUnico" HorizontalAlignment="Left" Height="26" Margin="426,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
         <Button x:Name="btnRegresarUsuario" Content="Regresar" HorizontalAlignment="Left" Height="28" Margin="413,343,0,0" VerticalAlignment="Top" Width="114" Background="#FF5585A0" FontFamily="Yu Gothic UI Semibold" FontSize="15" BorderBrush="{x:Null}" Foreground="White" Click="btnRegresarUsuario_Click"/>
         <Label Content="CREAR USUARIO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF23697F" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="CREAR USUARIO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FF4194AE" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
+        <Label Content="Usuario:" HorizontalAlignment="Left" Margin="245,123,0,0" VerticalAlignment="Top" Width="128" Background="#FFBDD6DC" HorizontalContentAlignment="Right" Foreground="#FF384C78" FontFamily="Yu Gothic UI Semibold"/>
+        <TextBox x:Name="txtIdUsuario" HorizontalAlignment="Left" Height="26" Margin="426,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138"/>
 
     </Grid>
 </Window>

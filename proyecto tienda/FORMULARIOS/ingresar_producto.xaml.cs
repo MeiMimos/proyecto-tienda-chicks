@@ -64,5 +64,12 @@ namespace proyecto_tienda
         {
             Guardar();
         }
+
+        private void btnRegresarIngPro_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 x = new Window1();  
+            x.Show();
+            this.Close();
+        }
     }
 }
