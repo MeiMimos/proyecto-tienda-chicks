@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clusuario
+    internal class clgrupo
     {
+        public int GRU_ID { get; set; }
+        public string GRU_NOMBRE { get; set; }
     }
 }

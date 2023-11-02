@@ -1,5 +1,7 @@
-﻿using System;
+﻿using proyecto_tienda.CLASES;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,17 +29,29 @@ namespace proyecto_tienda
 
         private void btnInicioSesion_Click(object sender, RoutedEventArgs e)
         {
-            Window1 x = new Window1();
-            x.Show();
-            this.Close();
-        }
+            SqlConnection con = new SqlConnection(clconexion.Conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+            con.Open();
 
-        private void btnCrearCuenta_Click(object sender, RoutedEventArgs e)
-        {
-            usuario_detalle x = new usuario_detalle();  
-            x.Show();
-            this.Close();
-        }
+            string login = "SELECT * FROM USUARIO WHERE USU_NOMBRE='" + txtUsuarioInicio.Text + "'AND USU_CONTRASENA= '" + txtContraseñaInicio.Password + "'";
+            cmd = new SqlCommand(login, con);
+            SqlDataReader dr = cmd.ExecuteReader();
 
+            if (dr.Read() == true)
+            {
+                Window1 x = new Window1();
+                x.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Datos Incorrectos", "ERROR LOGIN", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtUsuarioInicio.Text = "";
+                txtContraseñaInicio.Password = "";
+                txtUsuarioInicio.Focus();
+
+            }
+        }
     }
 }
+

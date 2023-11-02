@@ -20,7 +20,7 @@
         <Label Content="CREACIÓN DE CUENTA A PROVEEDOR" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FF52A7A3" Height="70" Width="564" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="txtnombrep" HorizontalAlignment="Left" Height="28" Margin="419,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
         <TextBox x:Name="txtcontactop" HorizontalAlignment="Left" Height="28" Margin="419,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>        <TextBox HorizontalAlignment="Left" Height="28" Margin="419,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="32" Margin="419,342,0,0" VerticalAlignment="Top" Width="131" Background="#FF6BB8AC"  BorderBrush="{x:Null}" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
+        <Button x:Name="btnRegProv" Content="Regresar" HorizontalAlignment="Left" Height="32" Margin="419,342,0,0" VerticalAlignment="Top" Width="131" Background="#FF6BB8AC"  BorderBrush="{x:Null}" Foreground="White" FontFamily="Yu Gothic UI Semibold" Click="btnRegProv_Click"/>
 
     </Grid>
 </Window>

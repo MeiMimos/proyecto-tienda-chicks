@@ -1,6 +1,7 @@
 ﻿using proyecto_tienda.CLASES;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace proyecto_tienda
         public Window6()
         {
             InitializeComponent();
+            ObservableCollection<clestanteria> lista = new ObservableCollection<clestanteria>(GetDatabase.ObtenerEstanteria(clconexion.Conectar()));
+            cboxEstantes.ItemsSource = lista;
         }
 
         private void btnRegresarGrupo_Click(object sender, RoutedEventArgs e)
@@ -37,12 +40,15 @@ namespace proyecto_tienda
         private void Guardar()
         {
             SqlConnection con = new SqlConnection(clconexion.Conectar());
-            SqlCommand cmd = new SqlCommand("", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO GRUPO(GRU_ID, GRU_EST_ID, GRU_COLORES) VALUES (@GRU_ID, @GRU_NOMBRES,@GRU_COLORES,@GRU_EST_ID)", con);
             bool todobien = false;
             try
             {
                 con.Open();
-                cmd.CommandText = "INSERT INTO GRUPO(GRU_ID, GRU_EST_ID, GRU_COLORES)VALUES(" + Convert.ToInt32(txtIdGrupo.Text) + ",'" + txtIdGrupo.Text + ",'" + cboxEstantes.Text + ",'" + cboxTipoProducto.Text + ",'" + txtColorGrupo.Text + "')";
+                cmd.Parameters.AddWithValue("@GRU_ID", Convert.ToInt32(txtIdGrupo.Text));
+                cmd.Parameters.AddWithValue("@GRU_NOMBRE", txtNombreGrupo.Text);
+                cmd.Parameters.AddWithValue("@GRU_COLORES", txtColorGrupo.Text);
+                cmd.Parameters.AddWithValue("@GRU_EST_ID", cboxEstantes.SelectedValue);
                 cmd.ExecuteNonQuery();
                 todobien = true;
             }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clusuario
+    internal class clestanteria
     {
+        public int  EST_ID { get; set; }
+        public string EST_DESC  { get; set; }
     }
 }
