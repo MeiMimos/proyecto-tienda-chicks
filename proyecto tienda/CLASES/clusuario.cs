@@ -8,7 +8,5 @@ namespace proyecto_tienda.CLASES
 {
     internal class clusuario
     {
-        
-        
     }
 }
