@@ -18,7 +18,7 @@
         <Button x:Name="btnRegresarGrupo" Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="417,327,0,0" VerticalAlignment="Top" Width="122" Background="#FFCE4EA1" HorizontalContentAlignment="Center"  BorderBrush="{x:Null}" Click="btnRegresarGrupo_Click" FontFamily="Yu Gothic UI Semibold" FontSize="15" Foreground="White"/>
         <Label Content="GENERAR GRUPO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF840E70" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="GENERAR GRUPO" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FFB41298" Height="62" Width="284" Background="{x:Null}" HorizontalContentAlignment="Center"/>
-        <ComboBox x:Name="cboxEstantes" HorizontalAlignment="Left" Height="26" Margin="417,201,0,0" VerticalAlignment="Top" Width="138" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cboxEstantes" HorizontalAlignment="Left" Height="26" Margin="417,201,0,0" VerticalAlignment="Top" Width="138" BorderBrush="{x:Null}" DisplayMemberPath="EST_DESC" SelectionChanged="cboxEstantes_SelectionChanged" >
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>

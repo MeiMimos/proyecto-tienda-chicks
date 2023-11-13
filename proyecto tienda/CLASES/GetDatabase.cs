@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class GetDatabase
+    public class GetDatabase
     {
         public static List<clgrupo> ObtenerGrupo(string sConexion)
         {
@@ -18,7 +18,7 @@ namespace proyecto_tienda.CLASES
             SqlDataReader l;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM GRUPO";
+            cmd.CommandText = "SELECT GRU_ID, GRU_NOMBRE, GRU_COLORES, GRU_EST_ID FROM GRUPO";
             con.Open();
             l = cmd.ExecuteReader();
             while (l.Read())
@@ -59,5 +59,31 @@ namespace proyecto_tienda.CLASES
             l.Close();
             return lista;
         }
+
+        public static List<clestadoCompra> ObtenerEstadoCompra(string sConexion, string sFiltro)
+        {
+            List<clgrupo> lista = new List<clgrupo>();
+            SqlConnection con = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader l;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM COMPRA WHERE COM_ID LIKE '%"+ sFiltro +"%'";
+            con.Open();
+            l = cmd.ExecuteReader();
+            while (l.Read())
+            {
+                clgrupo _Grupo = new clgrupo();
+                {
+                    _Grupo.GRU_ID = l.GetInt32(0);
+                    _Grupo.GRU_NOMBRE = l.GetString(1);
+                }
+                lista.Add(_Grupo);
+            }
+            con.Close();
+            l.Close();
+            return lista;
+        }
+
     }
 }

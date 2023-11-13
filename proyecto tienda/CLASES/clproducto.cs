@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clproducto
+    public class clproducto
     {
         public int PRO_ID { get; set; }
         public float PRO_PRECIO { get; set; }
