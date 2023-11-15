@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_tienda.FORMULARIOS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,15 @@ namespace proyecto_tienda
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.F2) 
+            {
+                buscarcliente bc = new buscarcliente();
+                bc.ShowDialog();
+            }
         }
     }
 }

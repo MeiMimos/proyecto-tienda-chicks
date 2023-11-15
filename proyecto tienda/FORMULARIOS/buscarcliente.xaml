@@ -1,0 +1,19 @@
+﻿<Window x:Class="proyecto_tienda.FORMULARIOS.buscarcliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda.FORMULARIOS"
+        mc:Ignorable="d"
+        Title="buscarcliente" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="187*"/>
+            <RowDefinition Height="247*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtfiltro" HorizontalAlignment="Left" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="21" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Filtrar:" HorizontalAlignment="Left" Margin="51,53,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dgvfiltro" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,116,0,0" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>

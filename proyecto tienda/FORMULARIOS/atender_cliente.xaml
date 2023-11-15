@@ -11,7 +11,7 @@
         <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Center" Width="768" Background="#FFEBEDF7"/>
 
         <Label Content="ID del cliente:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
+        <TextBox x:Name="txtidcliente" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA" KeyDown="txtidcliente_KeyDown"/>
         <Button Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF99A2C9" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
         <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
         <TextBox HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>

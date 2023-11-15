@@ -34,6 +34,30 @@ namespace proyecto_tienda.CLASES
             l.Close();
             return lista;
         }
+        public static List<clgrupo> ObtenerClienteFiltro(string sFiltro)
+        {
+            List<clcliente> lista = new List<clcliente>();
+            SqlConnection con = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader l;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%'" + sFiltro + "%'";
+            con.Open();
+            l = cmd.ExecuteReader();
+            while (l.Read())
+            {
+                clcliente _Cliente = new clcliente();
+                {
+                    _Cliente.CLI_ID = l.GetInt32(0);
+                    _Cliente.CLI_NOMBRE = l.GetString(1);
+                }
+                lista.Add(_Cliente);
+            }
+            con.Close();
+            l.Close();
+            return lista;
+        }
     }
 }
 
