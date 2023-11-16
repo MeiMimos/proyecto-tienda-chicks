@@ -55,7 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CLASES\clconexion.cs" />
+    <Compile Include="CLASES\clestadoCompra.cs" />
+    <Compile Include="CLASES\clestanteria.cs" />
+    <Compile Include="CLASES\clgrupo.cs" />
+    <Compile Include="CLASES\clproducto.cs" />
     <Compile Include="CLASES\clusuario.cs" />
+    <Compile Include="CLASES\GetDatabase.cs" />
+    <Compile Include="FORMULARIOS\EstadoCompra.xaml.cs">
+      <DependentUpon>EstadoCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\usuario_detalle.xaml.cs">
       <DependentUpon>usuario_detalle.xaml</DependentUpon>
     </Compile>
@@ -80,6 +89,10 @@
     <Compile Include="FORMULARIOS\atender_cliente.xaml.cs">
       <DependentUpon>atender_cliente.xaml</DependentUpon>
     </Compile>
+    <Page Include="FORMULARIOS\EstadoCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FORMULARIOS\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

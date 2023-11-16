@@ -11,7 +11,7 @@
         <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Center" Width="768" Background="#FFEBEDF7"/>
 
         <Label Content="ID del cliente:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
+        <TextBox x:Name="txtidcliente" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
         <Button Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF99A2C9" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
         <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
         <TextBox HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
@@ -19,7 +19,7 @@
         <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="175,372,0,0" VerticalAlignment="Top" Width="122" Background="#FFD0A7ED" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
         <DatePicker HorizontalAlignment="Left" Height="32" Margin="625,33,0,0" VerticalAlignment="Top" Width="150" FontFamily="Yu Gothic UI Semibold" Foreground="#FF99A2C9"/>
         <Label Content="ID" HorizontalAlignment="Left" Height="31" Margin="29,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="29,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA"/>
+        <TextBox x:Name="txtidproducto" HorizontalAlignment="Left" Height="31" Margin="29,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA" KeyDown="txtidproducto_KeyDown"/>
         <Label Content="Producto" HorizontalAlignment="Left" Height="31" Margin="164,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <TextBox HorizontalAlignment="Left" Height="31" Margin="164,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA"/>
         <Label Content="Cantidad" HorizontalAlignment="Left" Height="31" Margin="296,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>

@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data.SqlClient;
 using proyecto_tienda.CLASES;
 using System.Collections.ObjectModel;
+using proyecto_tienda.FORMULARIOS;
 
 namespace proyecto_tienda
 {
@@ -23,6 +24,7 @@ namespace proyecto_tienda
     /// </summary>
     public partial class Window2 : Window
     {
+
         public Window2()
         {
             InitializeComponent();

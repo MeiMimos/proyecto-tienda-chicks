@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_tienda.FORMULARIOS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,16 @@ namespace proyecto_tienda
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+        }
+
+        private void txtIDPro_KeyDown(object sender, KeyEventArgs e)
+        {
+                if (e.Key == Key.F2)
+                {
+                    buscarcompra bc = new buscarcompra();
+                    bc.ShowDialog();
+                }
 
         }
     }

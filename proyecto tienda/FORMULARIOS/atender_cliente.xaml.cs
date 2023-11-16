@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_tienda.FORMULARIOS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,18 +20,22 @@ namespace proyecto_tienda
     /// </summary>
     public partial class Window7 : Window
     {
-        public Window7()
+        private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
         {
-            InitializeComponent();
+            if (e.Key == Key.F2)
+            {
+                buscarcliente bc = new buscarcliente();
+                bc.ShowDialog();
+            }
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void txtidproducto_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+            if (e.Key == Key.F2)
+            {
+                buscarProducto bc = new buscarProducto();
+                bc.ShowDialog();
+            }
 
         }
     }

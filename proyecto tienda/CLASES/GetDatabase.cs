@@ -60,30 +60,58 @@ namespace proyecto_tienda.CLASES
             return lista;
         }
 
-        public static List<clestadoCompra> ObtenerEstadoCompra(string sConexion, string sFiltro)
+        public static List<clgrupo> ObtenerClienteFiltro(string sFiltro, string sConexion)
         {
-            List<clgrupo> lista = new List<clgrupo>();
+            List<clcliente> lista = new List<clcliente>();
             SqlConnection con = new SqlConnection(sConexion);
             SqlCommand cmd = new SqlCommand("", con);
             SqlDataReader l;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM COMPRA WHERE COM_ID LIKE '%"+ sFiltro +"%'";
+            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%'" + sFiltro + "%'";
             con.Open();
             l = cmd.ExecuteReader();
             while (l.Read())
             {
-                clgrupo _Grupo = new clgrupo();
+                clcliente _Cliente = new clcliente();
                 {
-                    _Grupo.GRU_ID = l.GetInt32(0);
-                    _Grupo.GRU_NOMBRE = l.GetString(1);
+                    _Cliente.CLI_ID = l.GetInt32(0);
+                    _Cliente.CLI_NOMBRE = l.GetString(1);
+                    _Cliente.CLI_APP = l.GetString(2);
+                    _Cliente.CLI_APM = l.GetString(3);
+                    _Cliente.CLI_TELEFONO = l.GetString(4);
                 }
-                lista.Add(_Grupo);
+                lista.Add(_Cliente);
             }
             con.Close();
             l.Close();
             return lista;
         }
+        /*public static List<clcliente> ObtenerEstadoProducto(string sConexion, string sFiltro)
+        {
+            List<cl> lista = new List<clcliente>();
+            SqlConnection con = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader l;
 
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%" + sFiltro + "%'";
+            con.Open();
+            l = cmd.ExecuteReader();
+            while (l.Read())
+            {
+                clcliente _Producto = new clcliente();
+                {
+                    _Producto.PRO_ID = l.GetInt32(0);
+                    _Producto.PRO_PRECIO= l.GetInt32(1);
+                    _Producto.PRO_UNIDAD = l.GetInt32(2);
+                    _Producto.PRO_
+                }
+                lista.Add(_Producto);
+            }
+            con.Close();
+            l.Close();
+            return lista;
+        }*/
     }
 }

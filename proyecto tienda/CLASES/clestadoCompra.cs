@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clusuario
+    internal interface clestadoCompra
     {
-    
-        
+
     }
 }

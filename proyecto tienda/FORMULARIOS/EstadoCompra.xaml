@@ -1,0 +1,17 @@
+﻿<Window x:Class="proyecto_tienda.FORMULARIOS.EstadoCompra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyecto_tienda.FORMULARIOS"
+        mc:Ignorable="d"
+        Title="EstadoCompra" Height="450" Width="800">
+    <Grid>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="95,49,0,0" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Center" Height="139" Margin="0,199,0,0" VerticalAlignment="Top" Width="674" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="138,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="FILTRO:" HorizontalAlignment="Left" Margin="58,126,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FiltroNombre" HorizontalAlignment="Left" Height="28" Margin="138,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="215" TextChanged="FiltroNombre_TextChanged"/>
+
+    </Grid>
+</Window>
