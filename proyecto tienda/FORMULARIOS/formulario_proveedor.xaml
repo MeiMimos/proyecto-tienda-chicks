@@ -14,12 +14,12 @@
         <Label Content="Dirección:" HorizontalAlignment="Left" Margin="241,284,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" FontFamily="Yu Gothic UI Semibold" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Right" Foreground="White" FontSize="20"/>
         <Button x:Name="btnguardarp" Content="Guardar" HorizontalAlignment="Left" Height="32" Margin="254,342,0,0" VerticalAlignment="Top" Width="130" Background="#FF3D8C80" BorderBrush="{x:Null}" Foreground="White" FontFamily="Yu Gothic UI Semibold" Click="btnguardarp_Click"/>
         <TextBox x:Name="txtidp" HorizontalAlignment="Left" Height="28" Margin="419,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="419,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtidprov" HorizontalAlignment="Left" Height="28" Margin="419,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" KeyDown="txtidprov_KeyDown"/>
         <Label Content="ID:" HorizontalAlignment="Left" Margin="241,110,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Right" Foreground="White" FontSize="20"/>
         <Label Content="CREACIÓN DE CUENTA A PROVEEDOR" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="40" Foreground="#FF7DCE95" Height="62" Width="564" Background="{x:Null}" HorizontalContentAlignment="Center"/>
         <Label Content="CREACIÓN DE CUENTA A PROVEEDOR" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="39" Foreground="#FF52A7A3" Height="70" Width="564" Background="{x:Null}" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txtnombrep" HorizontalAlignment="Left" Height="28" Margin="419,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBox x:Name="txtcontactop" HorizontalAlignment="Left" Height="28" Margin="419,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>        <TextBox HorizontalAlignment="Left" Height="28" Margin="419,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBox x:Name="txtnombrep" HorizontalAlignment="Left" Height="28" Margin="419,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" KeyDown="txtnombrep_KeyDown"/>
+        <TextBox x:Name="txtcontactop" HorizontalAlignment="Left" Height="28" Margin="419,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" KeyDown="txtcontactop_KeyDown"/>        <TextBox x:Name="txtdireccion" HorizontalAlignment="Left" Height="28" Margin="419,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" KeyDown="txtdireccion_KeyDown"/>
         <Button x:Name="btnRegProv" Content="Regresar" HorizontalAlignment="Left" Height="32" Margin="419,342,0,0" VerticalAlignment="Top" Width="131" Background="#FF6BB8AC"  BorderBrush="{x:Null}" Foreground="White" FontFamily="Yu Gothic UI Semibold" Click="btnRegProv_Click"/>
 
     </Grid>

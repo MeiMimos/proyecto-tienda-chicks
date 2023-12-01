@@ -25,19 +25,17 @@ namespace proyecto_tienda
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void txtidproveedor_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void txtIDPro_KeyDown(object sender, KeyEventArgs e)
-        {
-                if (e.Key == Key.F2)
+            if (e.Key == Key.F2)
+            {
+                buscarproveedor bp = new buscarproveedor();
+                bp.ShowDialog();
+                if (bp.DialogResult == true)
                 {
-                    buscarcompra bc = new buscarcompra();
-                    bc.ShowDialog();
+                    txtidproveedor.Text = bp.iProveedor.ToString();
                 }
-
+            }
         }
     }
 }

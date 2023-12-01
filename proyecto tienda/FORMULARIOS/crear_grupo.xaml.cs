@@ -101,5 +101,29 @@ namespace proyecto_tienda
             iEstante = (int)p.GetValue(estante, null);
 
         }
+
+        private void txtNombreGrupo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                cboxEstantes.Focus();
+            }
+        }
+
+        private void cboxEstantes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                txtColorGrupo.Focus();
+            }
+        }
+
+        private void txtColorGrupo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                btnGuardarGrupo.Focus();
+            }
+        }
     }
 }

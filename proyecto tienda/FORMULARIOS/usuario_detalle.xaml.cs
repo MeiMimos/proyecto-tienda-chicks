@@ -72,5 +72,32 @@ namespace proyecto_tienda
         {
             Guardar();
         }
+
+        private void txtIdUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtNomUsuario.Focus();
+            }
+        }
+
+        private void txtNomUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtContraUsuarioUnico.Focus();
+            }
+        }
+
+        private void txtContraUsuarioUnico_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                btnCrearUsuario.Focus();
+            }
+        }
     }
 }

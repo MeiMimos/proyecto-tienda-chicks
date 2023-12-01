@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:proyecto_tienda.FORMULARIOS"
         mc:Ignorable="d"
         Title="buscarcliente" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFEBEDF7">
         <Grid.RowDefinitions>
             <RowDefinition Height="187*"/>
             <RowDefinition Height="247*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="txtfiltro" HorizontalAlignment="Left" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="21" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Filtrar:" HorizontalAlignment="Left" Margin="51,53,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="dgvfiltro" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,116,0,0" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtfiltro" HorizontalAlignment="Left" Margin="113,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="21" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Filtrar:" HorizontalAlignment="Left" Margin="52,80,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dgvfiltro" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="141,169,141,142" SelectionChanged="dgvfiltro_SelectionChanged" Grid.RowSpan="2"/>
+        <Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Height="24" Margin="490,0,0,0" VerticalAlignment="Center" Width="107" Background="#FF8795DA" Click="btnAceptar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Height="24" Margin="634,0,0,0" VerticalAlignment="Center" Width="107" Background="#FF44518F" Click="btnCancelar_Click"/>
 
     </Grid>
 </Window>

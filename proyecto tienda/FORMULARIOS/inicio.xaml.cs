@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_tienda.FORMULARIOS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace proyecto_tienda
         public Window1()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -72,7 +74,7 @@ namespace proyecto_tienda
 
         private void btnAtenCliente_Click(object sender, RoutedEventArgs e)
         {
-            Window7 x = new Window7();
+            atender_clientes x = new atender_clientes();
             x.Show();
             this.Close();
         }

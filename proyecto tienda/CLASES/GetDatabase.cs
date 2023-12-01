@@ -60,7 +60,7 @@ namespace proyecto_tienda.CLASES
             return lista;
         }
 
-        public static List<clgrupo> ObtenerClienteFiltro(string sFiltro, string sConexion)
+        public static List<clcliente> ObtenerClienteFiltro(string sConexion, string sFiltro)
         {
             List<clcliente> lista = new List<clcliente>();
             SqlConnection con = new SqlConnection(sConexion);
@@ -68,7 +68,7 @@ namespace proyecto_tienda.CLASES
             SqlDataReader l;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%'" + sFiltro + "%'";
+            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%" + sFiltro + "%'";
             con.Open();
             l = cmd.ExecuteReader();
             while (l.Read())
@@ -87,31 +87,29 @@ namespace proyecto_tienda.CLASES
             l.Close();
             return lista;
         }
-        /*public static List<clcliente> ObtenerEstadoProducto(string sConexion, string sFiltro)
+        public static List<clproveedor> ObtenerProveedorFiltro(string sFiltro, string sConexion)
         {
-            List<cl> lista = new List<clcliente>();
+            List<clproveedor> lista = new List<clproveedor>();
             SqlConnection con = new SqlConnection(sConexion);
             SqlCommand cmd = new SqlCommand("", con);
             SqlDataReader l;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM CLIENTE WHERE CLI_NOMBRE LIKE '%" + sFiltro + "%'";
+            cmd.CommandText = "SELECT * FROM PROVEEDOR WHERE PRV_NOMBRE LIKE '%" + sFiltro + "%'";
             con.Open();
             l = cmd.ExecuteReader();
             while (l.Read())
             {
-                clcliente _Producto = new clcliente();
+                clproveedor _Proveedor = new clproveedor();
                 {
-                    _Producto.PRO_ID = l.GetInt32(0);
-                    _Producto.PRO_PRECIO= l.GetInt32(1);
-                    _Producto.PRO_UNIDAD = l.GetInt32(2);
-                    _Producto.PRO_
+                    _Proveedor.PRV_ID = l.GetInt32(0);
+                    _Proveedor.PRV_NOMBRE = l.GetString(1);
                 }
-                lista.Add(_Producto);
+                lista.Add(_Proveedor);
             }
             con.Close();
             l.Close();
             return lista;
-        }*/
+        }
     }
 }

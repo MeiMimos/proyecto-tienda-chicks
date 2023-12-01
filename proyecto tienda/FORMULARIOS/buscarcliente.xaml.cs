@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,10 +22,12 @@ namespace proyecto_tienda.FORMULARIOS
     /// </summary>
     public partial class buscarcliente : Window
     {
+
+        public int iCliente;
         public buscarcliente()
         {
             InitializeComponent();
-            ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar()));
+            ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar(),txtfiltro.Text));
             dgvfiltro.ItemsSource = lista;
         }
 
@@ -32,6 +35,24 @@ namespace proyecto_tienda.FORMULARIOS
         {
             ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar(), txtfiltro.Text));
             dgvfiltro.ItemsSource = lista;
+        }
+
+        private void dgvfiltro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var Cliente = dgvfiltro.SelectedItem;
+            Type t = Cliente.GetType();
+            PropertyInfo p = t.GetProperty("CLI_ID");
+            iCliente = (int)p.GetValue(Cliente, null);
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void btnAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
         }
     }
 }

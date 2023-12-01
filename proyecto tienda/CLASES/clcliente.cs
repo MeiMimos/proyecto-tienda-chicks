@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clcliente
+    public class clcliente
     {
         public int CLI_ID { get; set; }
         public string CLI_NOMBRE { get; set;}

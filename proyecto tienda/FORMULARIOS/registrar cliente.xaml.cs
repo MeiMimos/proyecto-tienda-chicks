@@ -55,5 +55,50 @@ namespace proyecto_tienda
         {
             Guardar();
         }
+
+        private void txtnombrec_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtappc.Focus();
+            }
+        }
+
+        private void txtappc_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtapmc.Focus();
+            }
+        }
+
+        private void txtapmc_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txttelefonoc.Focus();
+            }
+        }
+
+        private void txttelefonoc_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                btngenerar.Focus();
+            }
+        }
+
+        private void btngenerar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                btnguardarc.Focus();
+            }
+        }
     }
 }

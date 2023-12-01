@@ -21,7 +21,7 @@ namespace proyecto_tienda.FORMULARIOS
     /// </summary>
     public partial class buscarProducto : Window
     {
-        public buscarProducto()
+       /* public buscarProducto()
         {
             InitializeComponent();
             ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar()));
@@ -32,7 +32,7 @@ namespace proyecto_tienda.FORMULARIOS
         {
             ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar(), txtfiltroPro.Text));
             filtroPro.ItemsSource = lista;
-        }
+        }*/
     }
 }
 

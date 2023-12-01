@@ -63,5 +63,41 @@ namespace proyecto_tienda
             x.Show();  
             this.Close();
         }
+
+        private void txtidprov_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtnombrep.Focus();
+            }
+        }
+
+        private void txtnombrep_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtcontactop.Focus();
+            }
+        }
+
+        private void txtcontactop_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                txtdireccion.Focus();
+            }
+        }
+
+        private void txtdireccion_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Return)
+            {
+                btnguardarp.Focus();
+            }
+        }
     }
 }

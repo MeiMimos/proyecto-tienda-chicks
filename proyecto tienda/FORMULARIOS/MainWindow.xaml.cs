@@ -52,6 +52,22 @@ namespace proyecto_tienda
 
             }
         }
+
+        private void txtUsuarioInicio_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                txtContraseñaInicio.Focus();
+            }
+        }
+
+        private void txtContraseñaInicio_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                btnInicioSesion.Focus();
+            }
+        }
     }
 }
 

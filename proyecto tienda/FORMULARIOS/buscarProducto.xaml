@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:proyecto_tienda.FORMULARIOS"
         mc:Ignorable="d"
         Title="buscarProducto" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFEBEDF7">
         <Grid.RowDefinitions>
-            <RowDefinition Height="187*"/>
-            <RowDefinition Height="247*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="txtfiltroPro" HorizontalAlignment="Left" Margin="112,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="341" Height="21"/>
-        <Label Content="Filtrar:" HorizontalAlignment="Left" Margin="51,53,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="filtroPro" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,116,0,0" Grid.RowSpan="2"/>
+        <Label Content="Filtrar:" HorizontalAlignment="Left" Margin="51,53,0,0" VerticalAlignment="Top" Height="26" Width="43"/>
+        <DataGrid x:Name="filtroPro" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,116,0,0" Background="#FFEBEDF7"/>
 
     </Grid>
 </Window>
