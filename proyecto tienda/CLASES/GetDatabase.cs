@@ -111,5 +111,36 @@ namespace proyecto_tienda.CLASES
             l.Close();
             return lista;
         }
+
+        public static List<clproducto> ObtenerProdutcoFiltro(string sConexion, string sFiltro)
+        {
+            List<clproducto> lista = new List<clproducto>();
+            SqlConnection con = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader l;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM PRODUCTO WHERE PRO_DESCRIPCION LIKE '%" + sFiltro + "%'";
+            con.Open();
+            l = cmd.ExecuteReader();
+            while (l.Read())
+            {
+                clproducto _Producto = new clproducto();
+                {
+                    _Producto.PRO_ID = l.GetInt32(0);
+                    _Producto.PRO_PRECIO = l.GetFloat(1);
+                    _Producto.PRO_UNIDAD = l.GetInt32(2);
+                    _Producto.PRO_COM_ID = l.GetInt32(3);
+                    _Producto.PRO_GRU_ID = l.GetInt32(4);
+                    _Producto.PRO_DESCRIPCION = l.GetString(5);
+                }
+                lista.Add(_Producto);
+            }
+            con.Close();
+            l.Close();
+            return lista;
+        }
+
+
     }
 }

@@ -20,6 +20,13 @@ namespace proyecto_tienda
     /// </summary>
     public partial class Window7 : Window
     {
+        public Window7()
+        {
+            InitializeComponent();
+            WindowState = WindowState.Maximized;
+        }
+
+        public string nombreCliente;
         private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F2)
@@ -41,7 +48,15 @@ namespace proyecto_tienda
 
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)
         {
+                
+        }
 
+
+        private void btnReg_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 x = new Window1();
+            x.Show();
+            this.Close();
         }
     }
 }

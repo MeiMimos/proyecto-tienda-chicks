@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proyecto_tienda.CLASES
 {
-    internal class clconexion
+    public class clconexion
     {
         public static string Conectar()
         {

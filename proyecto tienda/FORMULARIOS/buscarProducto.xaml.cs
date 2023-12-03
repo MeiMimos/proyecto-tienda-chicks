@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,18 +22,38 @@ namespace proyecto_tienda.FORMULARIOS
     /// </summary>
     public partial class buscarProducto : Window
     {
-       /* public buscarProducto()
+        public int iProducto;
+       public buscarProducto()
         {
             InitializeComponent();
-            ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar()));
+            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProdutcoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
             filtroPro.ItemsSource = lista;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ObservableCollection<clcliente> lista = new ObservableCollection<clcliente>(GetDatabase.ObtenerClienteFiltro(clconexion.Conectar(), txtfiltroPro.Text));
+            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProdutcoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
             filtroPro.ItemsSource = lista;
-        }*/
+        }
+ 
+
+        private void filtroPro_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            var vProducto = filtroPro.SelectedItem;
+            Type t = vProducto.GetType();
+            PropertyInfo p = t.GetProperty("PRO_ID");
+            iProducto = (int)p.GetValue(vProducto, null);
+        }
+
+        private void btnAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }
 

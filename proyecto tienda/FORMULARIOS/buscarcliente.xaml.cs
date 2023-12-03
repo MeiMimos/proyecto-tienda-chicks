@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -43,6 +44,9 @@ namespace proyecto_tienda.FORMULARIOS
             Type t = Cliente.GetType();
             PropertyInfo p = t.GetProperty("CLI_ID");
             iCliente = (int)p.GetValue(Cliente, null);
+            PropertyInfo pNombre = t.GetProperty("CLI_NOMBRE");
+            string nombreCliente = (string)pNombre.GetValue(Cliente, null);
+
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
