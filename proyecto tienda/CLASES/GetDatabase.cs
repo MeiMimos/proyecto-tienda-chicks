@@ -112,7 +112,7 @@ namespace proyecto_tienda.CLASES
             return lista;
         }
 
-        public static List<clproducto> ObtenerProdutcoFiltro(string sConexion, string sFiltro)
+        public static List<clproducto> ObtenerProductoFiltro(string sConexion, string sFiltro)
         {
             List<clproducto> lista = new List<clproducto>();
             SqlConnection con = new SqlConnection(sConexion);
@@ -128,11 +128,11 @@ namespace proyecto_tienda.CLASES
                 clproducto _Producto = new clproducto();
                 {
                     _Producto.PRO_ID = l.GetInt32(0);
-                    _Producto.PRO_PRECIO = l.GetFloat(1);
-                    _Producto.PRO_UNIDAD = l.GetInt32(2);
-                    _Producto.PRO_COM_ID = l.GetInt32(3);
-                    _Producto.PRO_GRU_ID = l.GetInt32(4);
-                    _Producto.PRO_DESCRIPCION = l.GetString(5);
+                    //_Producto.PRO_PRECIO = l.GetFloat(1);
+                    //_Producto.PRO_UNIDAD = l.GetInt32(2);
+                    //_Producto.PRO_COM_ID = l.GetInt32(3);
+                    //_Producto.PRO_GRU_ID = l.GetInt32(4);
+                    //_Producto.PRO_DESCRIPCION = l.GetString(5);
                 }
                 lista.Add(_Producto);
             }

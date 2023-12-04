@@ -37,5 +37,12 @@ namespace proyecto_tienda
                 }
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 x = new Window1();
+            x.Show();
+            this.Close();
+        }
     }
 }

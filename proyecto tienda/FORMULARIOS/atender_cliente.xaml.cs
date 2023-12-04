@@ -1,6 +1,7 @@
 ﻿using proyecto_tienda.FORMULARIOS;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,11 @@ namespace proyecto_tienda
         public Window7()
         {
             InitializeComponent();
+            Data();
             WindowState = WindowState.Maximized;
         }
-
+        private int contadorId = 1;
+        private DataTable dataTable;
         public string nombreCliente;
         private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
         {
@@ -57,6 +60,53 @@ namespace proyecto_tienda
             Window1 x = new Window1();
             x.Show();
             this.Close();
+        }
+
+        private void Data()
+        {
+            dataTable = new DataTable();
+            dataTable.Columns.Add("ID", typeof(int));
+            dataTable.Columns.Add("Producto", typeof(string));
+            dataTable.Columns.Add("Cantidad", typeof(int));
+            dataTable.Columns.Add("Precio", typeof(float));
+            dataTable.Columns.Add("Descripción", typeof(string));
+            //dtaProducto.DataSource = dataTable;                       
+        }
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            string producto = txtproducto.Text;
+            int cantidad;
+            decimal precio;
+            string desc = txtdesc.Text;
+
+            if(int.TryParse(txtcantidad.Text, out cantidad) && decimal.TryParse(txtprecios.Text, out precio))
+            {
+                DataRow row = DataTable();
+                row["ID"] = contadorId;
+                row["Producto"] = producto;
+                row["Cantidad"] = cantidad;
+                row["Precio"] = precio;
+                row["Descripción"] = desc;
+
+                contadorId++;
+
+                txtproducto.Clear();
+                txtcantidad.Clear();
+                txtprecios.Clear();
+                txtdesc.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese valores válidos para cantidad y precio.", "Error", MessageBoxButton.OK);
+            }
+
+
+        }
+
+        private DataRow DataTable()
+        {
+            throw new NotImplementedException();
         }
     }
 }

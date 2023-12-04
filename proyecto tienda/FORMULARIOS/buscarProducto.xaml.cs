@@ -26,13 +26,13 @@ namespace proyecto_tienda.FORMULARIOS
        public buscarProducto()
         {
             InitializeComponent();
-            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProdutcoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
+            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProductoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
             filtroPro.ItemsSource = lista;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProdutcoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
+            ObservableCollection<clproducto> lista = new ObservableCollection<clproducto>(GetDatabase.ObtenerProductoFiltro(clconexion.Conectar(), txtfiltroPro.Text));
             filtroPro.ItemsSource = lista;
         }
  
