@@ -1,7 +1,9 @@
-﻿using proyecto_tienda.FORMULARIOS;
+﻿using proyecto_tienda.CLASES;
+using proyecto_tienda.FORMULARIOS;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,11 +34,7 @@ namespace proyecto_tienda
         public string nombreCliente;
         private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.F2)
-            {
-                buscarcliente bc = new buscarcliente();
-                bc.ShowDialog();
-            }
+            
         }
 
         private void txtidproducto_KeyDown(object sender, KeyEventArgs e)
@@ -45,10 +43,16 @@ namespace proyecto_tienda
             {
                 buscarProducto bc = new buscarProducto();
                 bc.ShowDialog();
+                //if(bc.DialogResult == true)
+                //{
+                //    txtidproducto.Text = bc.iProducto.ToString();
+                //    buscarProducto(Convert.ToInt32(txtidproducto.Text));
+                //}
+
             }
 
         }
-
+        
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)
         {
                 
@@ -108,5 +112,7 @@ namespace proyecto_tienda
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }
