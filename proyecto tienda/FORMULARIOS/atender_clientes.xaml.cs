@@ -124,5 +124,17 @@ namespace proyecto_tienda.FORMULARIOS
 
             con.Close();
         }
+
+        private void btnguardar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 x = new Window1();
+            x.Show();
+            this.Close();
+        }
     }
 }

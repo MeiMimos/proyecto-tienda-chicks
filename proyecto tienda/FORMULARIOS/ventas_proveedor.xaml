@@ -10,24 +10,24 @@
         <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Center" Width="768" Background="#FFB6E5DB"/>
 
         <Label Content="ID del proveedor:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFB6E5DB" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
-        <TextBox x:Name="txtidproveedor" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" Foreground="#FFB6E5DB" BorderBrush="{x:Null}" KeyDown="txtidproveedor_KeyDown"/>
+        <TextBox x:Name="txtidproveedor" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" Foreground="Black" BorderBrush="{x:Null}" KeyDown="txtidproveedor_KeyDown"/>
         <Button Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF4B9E86" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
-        <Button Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF3E8A74" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF3E8A74" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Click="btnGuardar_Click"/>
+        <TextBox x:Name="txtidnom" HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Height="31" Margin="282,32,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="160,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF53B599" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Click="Button_Click"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="160,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF53B599" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Click="btnRegresar_Click"/>
         <DatePicker HorizontalAlignment="Left" Height="32" Margin="625,33,0,0" VerticalAlignment="Top" Width="150" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
         <Label Content="ID" HorizontalAlignment="Left" Height="31" Margin="47,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
-        <TextBox x:Name="txtIDPro" HorizontalAlignment="Left" Height="31" Margin="47,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtIDPro" HorizontalAlignment="Left" Height="31" Margin="47,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}" KeyDown="txtIDPro_KeyDown"/>
         <Label Content="Producto" HorizontalAlignment="Left" Height="31" Margin="184,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="184,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtproducto" HorizontalAlignment="Left" Height="31" Margin="184,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
         <Label Content="Cantidad" HorizontalAlignment="Left" Height="31" Margin="321,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="321,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="460,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtcantidad" HorizontalAlignment="Left" Height="31" Margin="321,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txtcosto" HorizontalAlignment="Left" Height="31" Margin="460,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFD0FAF5" BorderBrush="{x:Null}"/>
         <Label Content="Costo" HorizontalAlignment="Left" Height="31" Margin="460,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFB6E5DB" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF0D5C4B"/>
         <Image HorizontalAlignment="Left" Height="31" Margin="690,139,0,0" VerticalAlignment="Top" Width="32"/>
-        <Button Content="+" HorizontalAlignment="Left" Height="30" Margin="625,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" RenderTransformOrigin="1.51,0.221" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
-        <Button Content="-" HorizontalAlignment="Left" Height="30" Margin="663,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnAgregar" Content="+" HorizontalAlignment="Left" Height="30" Margin="625,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" RenderTransformOrigin="1.51,0.221" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}" Click="btnAgregar_Click"/>
+        <Button x:Name="btnDescartar" Content="-" HorizontalAlignment="Left" Height="30" Margin="663,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
         <DataGrid HorizontalAlignment="Left" Height="189" Margin="248,178,0,0" VerticalAlignment="Top" Width="359" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" Foreground="Black" FontFamily="Yu Gothic UI Semibold" FontSize="15">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Código" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
@@ -37,5 +37,6 @@
                 <DataGridTextColumn Header="Importe" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
             </DataGrid.Columns>
         </DataGrid>
+        <TextBox x:Name="txtidcompra" HorizontalAlignment="Left" Height="32" Margin="733,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Background="#FFD0FAF5" BorderBrush="{x:Null}" KeyDown="txtIDPro_KeyDown"/>
     </Grid>
 </Window>

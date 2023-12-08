@@ -87,7 +87,7 @@ namespace proyecto_tienda.CLASES
             l.Close();
             return lista;
         }
-        public static List<clproveedor> ObtenerProveedorFiltro(string sFiltro, string sConexion)
+        public static List<clproveedor> ObtenerProveedorFiltro(string sConexion, string sFiltro)
         {
             List<clproveedor> lista = new List<clproveedor>();
             SqlConnection con = new SqlConnection(sConexion);

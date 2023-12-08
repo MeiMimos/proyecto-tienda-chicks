@@ -7,15 +7,19 @@
         mc:Ignorable="d"
         Title="atender_clientes" Height="450" Width="800">
     <Grid>
-        <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Center" Width="768" Background="#FFEBEDF7"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="281*"/>
+            <RowDefinition Height="153*"/>
+        </Grid.RowDefinitions>
+        <Label Content="" HorizontalAlignment="Center" Height="392" VerticalAlignment="Top" Width="768" Background="#FFEBEDF7" Margin="0,21,0,0" Grid.RowSpan="2"/>
 
         <Label Content="ID del cliente:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <TextBox x:Name="txtidcliente" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA" KeyDown="txtidcliente_KeyDown"/>
         <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF99A2C9" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
-        <Button x:Name="btnguardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,372,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
+        <Button x:Name="btnguardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,91,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Grid.Row="1" Click="btnguardar_Click"/>
         <TextBox x:Name="txtclienteNom" HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Height="31" Margin="282,32,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="175,372,0,0" VerticalAlignment="Top" Width="122" Background="#FFD0A7ED" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="175,91,0,0" VerticalAlignment="Top" Width="122" Background="#FFD0A7ED" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Grid.Row="1" Click="btnRegresar_Click"/>
         <DatePicker HorizontalAlignment="Left" Height="32" Margin="625,33,0,0" VerticalAlignment="Top" Width="150" FontFamily="Yu Gothic UI Semibold" Foreground="#FF99A2C9"/>
         <Label Content="ID" HorizontalAlignment="Left" Height="31" Margin="29,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <TextBox x:Name="txtidproducto" HorizontalAlignment="Left" Height="31" Margin="29,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA" KeyDown="txtidproducto_KeyDown"/>
@@ -32,9 +36,8 @@
         <Label Content="Costo" HorizontalAlignment="Left" Height="31" Margin="554,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFD284A5"/>
         <TextBox x:Name="txtdesc" HorizontalAlignment="Left" Height="31" Margin="554,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA"/>
         <Label Content="Descuento" HorizontalAlignment="Left" Height="31" Margin="554,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <Label Content="0" HorizontalAlignment="Left" Height="31" Margin="733,0,0,26" VerticalAlignment="Bottom" Width="33" HorizontalContentAlignment="Center" Background="#FF8C5A9E" Foreground="White" FontFamily="Yu Gothic UI Semibold"/>
-        <Label Content="No. Ventas:" HorizontalAlignment="Left" Height="31" Margin="625,377,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
-        <DataGrid HorizontalAlignment="Left" Height="173" Margin="203,180,0,0" VerticalAlignment="Top" Width="438" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" FontFamily="Yu Gothic UI Semibold" FontSize="15">
+        <Label Content="No. Ventas:" HorizontalAlignment="Left" Height="31" Margin="600,91,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B" Grid.Row="1"/>
+        <DataGrid HorizontalAlignment="Left" Height="173" Margin="203,180,0,0" VerticalAlignment="Top" Width="438" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" FontFamily="Yu Gothic UI Semibold" FontSize="15" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Código" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
                 <DataGridTextColumn Header="Descripción" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
@@ -44,6 +47,6 @@
                 <DataGridTextColumn Header="Descuento"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="txtidventa" HorizontalAlignment="Left" Height="31" Margin="44,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="126" Background="#FFC4CBEA" KeyDown="txtidcliente_KeyDown"/>
+        <TextBox x:Name="txtidventa" HorizontalAlignment="Left" Height="32" Margin="716,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Background="#FF6A3A7B" KeyDown="txtidcliente_KeyDown" Grid.Row="1" Foreground="White"/>
     </Grid>
 </Window>

@@ -100,5 +100,12 @@ namespace proyecto_tienda
                 btnguardarc.Focus();
             }
         }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 x = new Window1();
+            x.Show();
+            this.Close();
+        }
     }
 }

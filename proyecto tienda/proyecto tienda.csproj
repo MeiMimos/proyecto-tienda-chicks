@@ -97,9 +97,6 @@
     <Compile Include="FORMULARIOS\crear_grupo.xaml.cs">
       <DependentUpon>crear_grupo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\atender_cliente.xaml.cs">
-      <DependentUpon>atender_cliente.xaml</DependentUpon>
-    </Compile>
     <Page Include="FORMULARIOS\atender_clientes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,10 +150,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FORMULARIOS\crear_grupo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FORMULARIOS\atender_cliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
