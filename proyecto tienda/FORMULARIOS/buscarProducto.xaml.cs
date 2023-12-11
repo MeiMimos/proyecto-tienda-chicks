@@ -43,7 +43,7 @@ namespace proyecto_tienda.FORMULARIOS
             Type t = vProducto.GetType();
             PropertyInfo p = t.GetProperty("PRO_ID");
             iProducto = (int)p.GetValue(vProducto, null);
-            PropertyInfo pNombre = t.GetProperty("PRO_NOMBRE");
+            PropertyInfo pNombre = t.GetProperty("PRO_DESCRIPCION");
             string nombreProducto = (string)pNombre.GetValue(vProducto, null);
         }
 

@@ -62,6 +62,7 @@
     <Compile Include="CLASES\clgrupo.cs" />
     <Compile Include="CLASES\clproducto.cs" />
     <Compile Include="CLASES\clproveedor.cs" />
+    <Compile Include="CLASES\cltempventa.cs" />
     <Compile Include="CLASES\clusuario.cs" />
     <Compile Include="CLASES\GetDatabase.cs" />
     <Compile Include="FORMULARIOS\atender_clientes.xaml.cs">

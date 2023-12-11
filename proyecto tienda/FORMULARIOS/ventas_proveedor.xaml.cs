@@ -26,6 +26,7 @@ namespace proyecto_tienda
         public Window3()
         {
             InitializeComponent();
+            consecutivo();
         }
 
         private void txtidproveedor_KeyDown(object sender, KeyEventArgs e)
@@ -37,16 +38,11 @@ namespace proyecto_tienda
                 if (bp.DialogResult == true)
                 {
                     txtidproveedor.Text = bp.iProveedor.ToString();
+                    buscarProveedor(Convert.ToInt32(txtidproveedor.Text));
                 }
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 x = new Window1();
-            x.Show();
-            this.Close();
-        }
         private void buscarProducto(int _pro_id)
         {
             SqlConnection con = new SqlConnection(clconexion.Conectar());
@@ -80,7 +76,7 @@ namespace proyecto_tienda
             con.Close();
             dr.Close();
         }
-        private void buscarCliente(int _id_proveedor)
+        private void buscarProveedor(int _id_proveedor)
         {
             SqlConnection con = new SqlConnection(clconexion.Conectar());
             SqlCommand cmd = new SqlCommand("", con);
@@ -91,8 +87,8 @@ namespace proyecto_tienda
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                txtIDPro.Text = dr.GetString(1);
-
+                txtIDPro.Text = dr.GetInt32(0).ToString();
+                txtidnom.Text = dr.GetString(1);
             }
             con.Close();
             dr.Close();

@@ -16,7 +16,7 @@
         <Label Content="ID del cliente:" HorizontalAlignment="Left" Height="31" Margin="32,33,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <TextBox x:Name="txtidcliente" HorizontalAlignment="Left" Height="31" Margin="142,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA" KeyDown="txtidcliente_KeyDown"/>
         <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Height="32" Margin="506,33,0,0" VerticalAlignment="Top" Width="84" Background="#FF99A2C9" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
-        <Button x:Name="btnguardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,91,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Grid.Row="1" Click="btnguardar_Click"/>
+        <Button x:Name="btnguardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="29,91,0,0" VerticalAlignment="Top" Width="122" Background="#FF9E84B7" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Grid.Row="1" Click="btnguardar_Click" />
         <TextBox x:Name="txtclienteNom" HorizontalAlignment="Left" Height="30" Margin="359,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Background="#FFC4CBEA"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Height="31" Margin="282,32,0,0" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Height="31" Margin="175,91,0,0" VerticalAlignment="Top" Width="122" Background="#FFD0A7ED" HorizontalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" BorderBrush="{x:Null}" Foreground="#FFF4F5F7" Grid.Row="1" Click="btnRegresar_Click"/>
@@ -37,16 +37,7 @@
         <TextBox x:Name="txtdesc" HorizontalAlignment="Left" Height="31" Margin="554,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Background="#FFC4CBEA"/>
         <Label Content="Descuento" HorizontalAlignment="Left" Height="31" Margin="554,97,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Center" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B"/>
         <Label Content="No. Ventas:" HorizontalAlignment="Left" Height="31" Margin="600,91,0,0" VerticalAlignment="Top" Width="104" HorizontalContentAlignment="Right" Background="#FFEBEDF7" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Semibold" Foreground="#FF6A3A7B" Grid.Row="1"/>
-        <DataGrid HorizontalAlignment="Left" Height="173" Margin="203,180,0,0" VerticalAlignment="Top" Width="438" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" FontFamily="Yu Gothic UI Semibold" FontSize="15" Grid.RowSpan="2">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Código" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
-                <DataGridTextColumn Header="Descripción" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
-                <DataGridTextColumn Header="Cantidad" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
-                <DataGridTextColumn Header="Precio" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
-                <DataGridTextColumn Header="Importe" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
-                <DataGridTextColumn Header="Descuento"/>
-            </DataGrid.Columns>
-        </DataGrid>
         <TextBox x:Name="txtidventa" HorizontalAlignment="Left" Height="32" Margin="716,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Background="#FF6A3A7B" KeyDown="txtidcliente_KeyDown" Grid.Row="1" Foreground="White"/>
+        <DataGrid x:Name="dtaCliente" HorizontalAlignment="Left" Height="134" Margin="164,199,0,0" VerticalAlignment="Top" Width="516" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2"/>
     </Grid>
 </Window>

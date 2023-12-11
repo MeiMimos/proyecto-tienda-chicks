@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using System.Collections;
 
 namespace proyecto_tienda.FORMULARIOS
 {
@@ -27,6 +29,7 @@ namespace proyecto_tienda.FORMULARIOS
             InitializeComponent();
             consecutivo();
         }
+
 
         private void txtidcliente_KeyDown(object sender, KeyEventArgs e)
         {
@@ -108,26 +111,62 @@ namespace proyecto_tienda.FORMULARIOS
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection con = new SqlConnection(clconexion.Conectar());
-            SqlCommand cmd = new SqlCommand("",con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_TMP_VENTA";
-            cmd.Parameters.AddWithValue("op",1);
-            cmd.Parameters.AddWithValue("@TMP_VEN_ID",Convert.ToInt32(txtidventa.Text));
-            cmd.Parameters.AddWithValue("@TMP_VEN_CLI_ID", Convert.ToInt32(txtidcliente.Text));
-            cmd.Parameters.AddWithValue("@TMP_VEDCANTIDAD", Convert.ToDouble(txtcantidad.Text));
-            cmd.Parameters.AddWithValue("@TMP_VEDPRECIO", Convert.ToDouble(txtprecios.Text));
-            
-            cmd.Parameters.AddWithValue("@TMP_VED_PRO_ID", Convert.ToInt32(txtidproducto.Text));
+
+            // Crear un nuevo comando para la inserción
+            SqlCommand cmdInsert = new SqlCommand("", con);
+            cmdInsert.CommandType = CommandType.StoredProcedure;
+            cmdInsert.CommandText = "SP_TMP_VENTA";
+            cmdInsert.Parameters.AddWithValue("op", 1);
+            cmdInsert.Parameters.AddWithValue("@TMP_VEN_ID", Convert.ToInt32(txtidventa.Text));
+            cmdInsert.Parameters.AddWithValue("@TMP_VEN_CLI_ID", Convert.ToInt32(txtidcliente.Text));
+            cmdInsert.Parameters.AddWithValue("@TMP_VEDCANTIDAD", Convert.ToDouble(txtcantidad.Text));
+            cmdInsert.Parameters.AddWithValue("@TMP_VEDPRECIO", Convert.ToDouble(txtprecios.Text));
+            cmdInsert.Parameters.AddWithValue("@TMP_VED_PRO_ID", Convert.ToInt32(txtidproducto.Text));
 
             con.Open();
-            cmd.ExecuteNonQuery();
+            cmdInsert.ExecuteNonQuery();
+            con.Close();
+
+            // Crear un nuevo comando para la consulta de selección
+            SqlCommand cmdSelect = new SqlCommand("SP_TMP_VENTA", con);
+            cmdSelect.CommandType = CommandType.StoredProcedure;
+            cmdSelect.Parameters.AddWithValue("op", 4);
+            cmdSelect.Parameters.AddWithValue("@TMP_VEN_ID", Convert.ToInt32(txtidventa.Text));
+
+            con.Open();
+            SqlDataReader rd = cmdSelect.ExecuteReader();
+            List<cltempventa> lista = new List<cltempventa>();
+
+            while (rd.Read())
+            {
+                // Verificar si hay suficientes columnas antes de intentar leerlas
+                if (rd.FieldCount >= 6)
+                {
+                    cltempventa _venta = new cltempventa()
+                    {
+                        TMP_VEN_ID = Convert.ToInt32(rd[0]),
+                        TMP_VEN_CLI_ID = Convert.ToInt32(rd[1]),
+                        TMP_VENFECHA = Convert.ToDateTime(rd[2]),
+                        TMP_VEDCANTIDAD = Convert.ToInt32(rd[3]),
+                        TMP_VEDPRECIO = Convert.ToDouble(rd[4]),
+                        TMP_VEDIMPORTE = Convert.ToDouble(rd[5]),
+                        TMP_VED_PRO_ID = Convert.ToInt32(rd[6]),
+                    };
+                    lista.Add(_venta);
+                }
+                else
+                {
+                    MessageBox.Show("El resultado del procedimiento almacenado no tiene suficientes columnas.");
+                }
+            }
 
             con.Close();
+            dtaCliente.ItemsSource = lista;
         }
 
         private void btnguardar_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
@@ -135,6 +174,11 @@ namespace proyecto_tienda.FORMULARIOS
             Window1 x = new Window1();
             x.Show();
             this.Close();
+        }
+
+        private void dtaCliente_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            
         }
     }
 }

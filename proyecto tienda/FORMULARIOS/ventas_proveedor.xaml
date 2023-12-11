@@ -28,7 +28,7 @@
         <Image HorizontalAlignment="Left" Height="31" Margin="690,139,0,0" VerticalAlignment="Top" Width="32"/>
         <Button x:Name="btnAgregar" Content="+" HorizontalAlignment="Left" Height="30" Margin="625,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" RenderTransformOrigin="1.51,0.221" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}" Click="btnAgregar_Click"/>
         <Button x:Name="btnDescartar" Content="-" HorizontalAlignment="Left" Height="30" Margin="663,134,0,0" VerticalAlignment="Top" Width="28" Background="#FF5FB59C" FontFamily="Yu Gothic UI Semibold" Foreground="White" BorderBrush="{x:Null}"/>
-        <DataGrid HorizontalAlignment="Left" Height="189" Margin="248,178,0,0" VerticalAlignment="Top" Width="359" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" Foreground="Black" FontFamily="Yu Gothic UI Semibold" FontSize="15">
+        <DataGrid x:Name="dtaProveedor" HorizontalAlignment="Left" Height="189" Margin="248,178,0,0" VerticalAlignment="Top" Width="359" d:ItemsSource="{d:SampleData ItemCount=5}" ForceCursor="True" Foreground="Black" FontFamily="Yu Gothic UI Semibold" FontSize="15">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Código" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
                 <DataGridTextColumn Header="Descripción" FontFamily="Yu Gothic UI Semibold" FontSize="20"/>
